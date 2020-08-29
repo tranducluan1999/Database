@@ -116,6 +116,7 @@ public class TimLaptop {
                 try {
                     Statement stmm = connect.createStatement();
                     ResultSet rs = stmm.executeQuery(sqlm);
+
                     while(rs.next())
                     {
                         int id = rs.getInt(1);
@@ -134,7 +135,7 @@ public class TimLaptop {
                         int sold = rs.getInt(14);
                         Timestamp cretedTimestamp = rs.getTimestamp(15);
                         Timestamp lastUpdatedTimestamp = rs.getTimestamp(16);
-                        System.out.println( "ID: " + id + ", Name: " + name + ", Url: " + url + ", Maker: " + maker+ ", Type: " + type
+                        System.out.println( " : " + id + ", Name: " + name + ", Url: " + url + ", Maker: " + maker+ ", Type: " + type
                                 + ", Ram: " + ram + ", CPU: " + cpu + ", SSD: " + ssd + ", HDD :" +hdd + ", Price: " + price
                                 + ", Card: " + card + ", ScreenResolution: " +  screenResolution + ",ScreenSize: "+ screenSize +
                                 ", Sold: " + sold + ", CreatedTimestamp: " + cretedTimestamp + ", LastUpdatedTimestamp: "+ lastUpdatedTimestamp);
